@@ -6,3 +6,14 @@ stages:
     - src/data/data_cleaning.py
     outs:
     - data/cleaned/cleaned_data.csv
+  data_preparation:
+    cmd: python src/data/data_preparation.py
+    deps:
+    - data/cleaned/cleaned_data.csv
+    - src/data/data_preparation.py
+    params:
+    - Data_Preparation.random_state
+    - Data_Preparation.test_size
+    outs:
+    - data/interim/test.csv
+    - data/interim/train.csv
