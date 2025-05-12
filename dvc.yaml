@@ -46,5 +46,6 @@ stages:
     - data/processed/train_trans.csv
     - data/processed/test_trans.csv
     - models/model.joblib
-    
+    outs:
+    - run_information.json
 
